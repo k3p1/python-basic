@@ -19,6 +19,7 @@ ODD = "odd"
 EVEN = "even"
 PRIME = "prime"
 
+
 def is_prime(num):
     if num > 1:
         for i in range(2, num):
@@ -26,6 +27,8 @@ def is_prime(num):
                 break
         else:
             return num
+
+
 def filter_numbers(numbers_list, filter_type):
     """
     функция, которая на вход принимает список из целых чисел,
