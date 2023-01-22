@@ -1,4 +1,5 @@
 from abc import ABC
+from homework_02.exceptions import LowFuelError, NotEnoughFuel, CargoOverload
 
 
 class Vehicle(ABC):
@@ -16,3 +17,5 @@ class Vehicle(ABC):
         if not self.started:
             if self.fuel > 0:
                 self.started = True
+            else:
+                raise LowFuelError
