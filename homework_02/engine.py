@@ -7,4 +7,4 @@ from dataclasses import dataclass
 @dataclass
 class Engine:
     volume: str
-    pistons: str
+    pistons: str  # это всё что требуется на данной странице? извините что много вопросов

@@ -6,13 +6,14 @@ class Vehicle(ABC):
     # weight = 20
     # started = False
     # fuel = 10
-    # fuel_consumption = 9
+    # fuel_consumption = 9  # Мне кажется тут атрибуты не нужны, мы же их дальше переопределяем.
 
     def __init__(self, weight, fuel, fuel_consumption):
         self.weight = weight
         self.fuel = fuel
+        # нужна ли тут проверка fuel_consumption > 0, и как можно ли тут делать её, это отдельное исключение выходит
         self.fuel_consumption = fuel_consumption
-        self.started = False
+        self.started = False  # может тут лучше None поставить? значения же по факту нет
 
     def start(self):
         if not self.started:
@@ -22,7 +23,7 @@ class Vehicle(ABC):
                 raise LowFuelError
 
     def move(self, distance):
-        if self.fuel >= distance * self.fuel_consumption:
+        if self.fuel >= distance * self.fuel_consumption:  # нужна ли проверка distance, fuel >= 0
             self.fuel -= distance * self.fuel_consumption
         else:
             raise NotEnoughFuel
