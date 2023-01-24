@@ -46,3 +46,5 @@ def filter_numbers(numbers_list, filter_type):
         return list(filter(lambda x: not x % 2, numbers_list))
     elif filter_type == PRIME:
         return list(filter(lambda x: is_prime(x), numbers_list))
+    else:
+        raise ValueError("Задан не верный тип фильтра")
