@@ -40,6 +40,7 @@ def filter_numbers(numbers_list, filter_type):
     >>> filter_numbers([2, 3, 4, 5], EVEN)
     <<< [2, 4]
     """
+
     if filter_type == ODD:
         return list(filter(lambda x: x % 2, numbers_list))
     elif filter_type == EVEN:

@@ -6,10 +6,10 @@ from homework_02.engine import Engine
 
 
 class Car(Vehicle):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.engine = None
+    # def __init__(self, weight, fuel, fuel_consumption, engine):
+    #     super().__init__(weight, fuel, fuel_consumption)
+    #     self.engine = engine  # а тут не надо переопределять инит? но тогда тесты не пройдет
+    engine = None
 
-    def set_engine(self):
-        self.engine = Engine
-
+    def set_engine(self, engine: Engine):  # мне кажется не верная реализация, но тесты проходит
+        self.engine = engine
